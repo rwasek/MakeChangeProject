@@ -21,6 +21,7 @@ public class MakeChangeApp {
 		while (change != 0) {
 
 			if (change >= 20) {
+				change = (double)Math.round(change * 100)/100;
 				double quotient = (change / 20);
 				change = (change % 20);
 				int twentyBills = (int) (quotient);
@@ -34,6 +35,7 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= 10 && change < 20) {
+				change = (double)Math.round(change * 100)/100;
 				double q2 = (change / 10);
 				change = (change % 10);
 				int tenBills = (int) (q2);
@@ -47,6 +49,7 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= 5 && change < 10) {
+				change = (double)Math.round(change * 100)/100;
 				double q3 = (change / 5);
 				change = (change % 5);
 				int fiveBills = (int) (q3);
@@ -60,6 +63,7 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= 1 && change < 5) {
+				change = (double)Math.round(change * 100)/100;
 				double q4 = (change / 1);
 				change = (change % 1);
 				int singleBills = (int) (q4);
@@ -73,9 +77,9 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= .25 && change < 1) {
+				change = (double)Math.round(change * 100)/100;
 				double q5 = (change / .25);
 				change = (change % .25);
-				change += 0.001;
 				int quarterCoin = (int) (q5);
 				System.out.print(quarterCoin + " quarter");
 				if (quarterCoin > 1) {
@@ -87,9 +91,9 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= .10 && change < .25) {
+				change = (double)Math.round(change * 100)/100;
 				double q6 = (change / .10);
 				change = (change % .10);
-				change += 0.001;
 				int dimeCoin = (int) (q6);
 				System.out.print(dimeCoin + " dime");
 				if (dimeCoin > 1) {
@@ -101,9 +105,9 @@ public class MakeChangeApp {
 					System.out.println(".");
 				}
 			} else if (change >= .05 && change < .10) {
+				change = (double)Math.round(change * 100)/100;
 				double q7 = (change / .05);
 				change = (change % .05);
-				change += 0.001;
 				int nickelCoin = (int) (q7);
 				System.out.print(nickelCoin + " nickel");
 				if (nickelCoin > 1) {
@@ -114,13 +118,14 @@ public class MakeChangeApp {
 				} else {
 					System.out.println(".");
 				}
-			} else if (change >= .01 && change < .05) {
+			} else if (change >= .001 && change < .05) {
+				change = (double)Math.round(change * 100)/100;
 				double q8 = (change / .01);
 				change = (change % .01);
 				int pennyCoin = (int) (q8);
 				System.out.print(pennyCoin + " penn");
 
-				if (pennyCoin == 1) {
+				if (pennyCoin <= 1) {
 					System.out.println("y.");
 				} else {
 					System.out.print("ies.");
