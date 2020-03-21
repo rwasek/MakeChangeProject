@@ -127,8 +127,15 @@ public class MakeChangeApp {
 
 				if (pennyCoin <= 1) {
 					System.out.println("y.");
+					if (change != 0) {
+						change = 0;
+					}
 				} else {
 					System.out.print("ies.");
+					if (change != 0) {
+						change = 0;
+					}
+					
 				}
 			} else {
 				System.out.print("");
