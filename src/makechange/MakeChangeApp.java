@@ -145,7 +145,6 @@ public class MakeChangeApp {
 				System.out.print("Perfect, that's the exact amount. ");
 				break;
 			} else if (tendered < price) {
-				double amtshort = price - tendered;
 				System.out.println("ERROR: Sorry, that is not enough money to cover the price of the item!"
 						+ "\nWant to try a larger amount? (Y/N)");
 				response = kb.next();
