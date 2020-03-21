@@ -1,5 +1,8 @@
 package makechange;
+
 import java.util.Scanner;
+import java.lang.Math;
+
 
 public class MakeChangeApp {
 
@@ -12,7 +15,8 @@ public class MakeChangeApp {
 		double tendered = kb.nextDouble();
 
 		double change = userInput(price, tendered);
-	
+		
+		change = (double)Math.round(change * 100)/100;
 
 		while (change != 0) {
 
@@ -113,17 +117,14 @@ public class MakeChangeApp {
 			} else if (change >= .01 && change < .05) {
 				double q8 = (change / .01);
 				change = (change % .01);
-				change += 0.001;
 				int pennyCoin = (int) (q8);
 				System.out.print(pennyCoin + " penn");
-				
+
 				if (pennyCoin == 1) {
 					System.out.println("y.");
-				}
-				else {
+				} else {
 					System.out.print("ies.");
 				}
-
 			} else {
 				System.out.print("");
 
