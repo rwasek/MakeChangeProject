@@ -9,19 +9,20 @@ Change will be produced after the expected inputs (when tender is greater than t
 ### Technologies Used
 
 - Eclipse
+
 - Java
+
 - Terminal Commands
+
 - GitHub/Git
+
 
 ### Lessons Learned
 
-- Methods
-- Method calling with Arguments and Parameters
-- While Loops
-- Conditionals
-- Expressions
-- Different Data Types
-- Casting Data Types
-- Nested If / Else statements
-- User Input with a Scanner properly imported.
-- Rounding with the math.double( ) function.
+- Dividing doubles and integers can leave remainders that can tamper with the logic of the code and produce undesirable output. Casting doubles into ints also helped with the code.
+
+- Math.round ( ) was a great way to take help with some of the remainder issue in my first project, and it cleared it up without extra addition being needed in my second make up.
+
+- Complex if/else statements can get difficult to work with if there are any bugs.  I re-did this project using a method for each denomination and may upload that as a MakeChange2 repo.
+
+- Defining a method using parameters and relaying back arguments into other functions is very useful and powerful.
